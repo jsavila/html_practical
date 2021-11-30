@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Clase1</title>
+    <title>Clase3</title>
     <style>
         :root {
             --white: #FFFFFF;
@@ -111,19 +111,23 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="Logo" class="logo">
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
-
             <form action="/" class="form">
+                <label for="email" class="label">Email Address</label>
+                <input type="text" id="email"
+                placeholder="paco@gmail.com" class="input input-email">
+
+
                 <label for="password" class="label">password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
+                <input type="password" id="password"
+                placeholder="*********" class="input input-password">
 
+                <input type="submit" value="Confirm"
+                class="primary-button login-button">
 
-                <label for="new-password" class="label">password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
-
-                <input type="submit" value="Confirm" class="primary-button login-button">
+                <a href="/">Forgot my password</a>
             </form>
+
+            <button class="secondary-button signup-button">Sign up</button>
         </div>
     </div>
 </body>

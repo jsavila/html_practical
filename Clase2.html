@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Clase1</title>
+    <title>Clase2</title>
     <style>
         :root {
             --white: #FFFFFF;
             --black: #000000;
-            --very-light-pink: #C7C7C7;
+            --very-light-pink: #8b6868c4;
             --text-input-field: #F7F7F7;
             --hospital-green: #ACD9B2;
             --sm: 14px;
@@ -38,6 +38,7 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            justify-items: center;
         }
 
         .logo {
@@ -61,26 +62,28 @@
             margin-bottom: 30px;
             text-align: center;
         }
-
-        .form {
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .input {
+        .email-image {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .email-image img {
+            width: 80px;
+        }
+        .resent {
+            font-size: var(--sm);
+        }
+        .resent span {
+            color: var(--very-light-pink);
+        }
+        .resent a {
+            color: var(--hospital-green);
+            text-decoration: n;
         }
         .primary-button {
             background: var(--hospital-green);
@@ -111,21 +114,22 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="Logo" class="logo">
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on
+                how to reset the password</p>
 
-            <form action="/" class="form">
-                <label for="password" class="label">password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
+            <div class="email-image">
+                <img src="./icons/email.svg" alt="email">
+            </div>
 
+            <button class="primary-button
+            login-button">Login</button>
 
-                <label for="new-password" class="label">password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
-
-                <input type="submit" value="Confirm" class="primary-button login-button">
-            </form>
+            <p>
+                <span>Didn't recive the email?</span>
+                <a href="/">Resend</a>
+            </p>
         </div>
     </div>
 </body>
-
 </html>
