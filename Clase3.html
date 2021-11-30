@@ -47,27 +47,19 @@
             display: none;
         }
 
-        .title {
-            font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .subtitle {
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
         .form {
             display: flex;
             flex-direction: column;
 
         }
 
+        .form a {
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 54px;
+        }
         .label {
             font-size: var(--sm);
             font-weight: bold;
@@ -82,6 +74,9 @@
             padding: 6px;
             margin-bottom: 12px;
         }
+        .input-email {
+            margin-bottom: 22px;
+        }
         .primary-button {
             background: var(--hospital-green);
             border-radius: 8px;
@@ -94,6 +89,17 @@
             height: 50px;
             color: var(--text-input-field);
         }
+        .secondary-button {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
         .login.button {
             margin-top: 14px;
             margin-bottom: 30px;
@@ -102,7 +108,15 @@
             .logo {
                 display: block;
             }
+            .secondary-button {
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 25px;
+            }
+
         }
+        
     </style>
 </head>
 
@@ -121,7 +135,7 @@
                 <input type="password" id="password"
                 placeholder="*********" class="input input-password">
 
-                <input type="submit" value="Confirm"
+                <input type="submit" value="Log in"
                 class="primary-button login-button">
 
                 <a href="/">Forgot my password</a>
